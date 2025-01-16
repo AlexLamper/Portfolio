@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Github } from 'lucide-react';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -11,49 +12,54 @@ const projects = [
     description: 'A Dutch web application where you can find all the Christian podcasts! Discover and listen to your favorites, from Bible studies to deep conversations about faith.',
     technologies: ['Next.js', 'Supabase', 'Tailwind CSS'],
     image: '/projects/christelijkepodcasts.png',
-    repo_link: 'https://github.com/AlexLamper/ChristelijkePodcasts'
+    repo_link: 'https://github.com/AlexLamper/ChristelijkePodcasts',
+    link: 'https://christelijkepodcasts.site/'
   },
   {
     title: 'Scripture',
     description: 'A Next.js-powered web app that offers a gamified experience to explore Bible teachings through quizzes, a dynamic map, and personalized progress tracking.',
     technologies: ['NextJS', 'Clerk', 'Bible API', 'Tailwind CSS'],
     image: '/projects/scripture2.png',
-    repo_link: 'https://github.com/AlexLamper/Scripture'
+    repo_link: 'https://github.com/AlexLamper/Scripture',
+    link: 'https://biblemap.site/'
   },
   {
     title: 'HabitSync',
     description: 'A simple and intuitive app to help you add, track, and maintain your habits effortlessly. Stay consistent and motivated as you build positive habits with ease.',
     technologies: ['NextJS', 'Vercel', 'Tailwind CSS', 'ShadCN'],
     image: '/projects/habitsync.png',
-    repo_link: 'https://github.com/AlexLamper/HabitSync'
+    repo_link: 'https://github.com/AlexLamper/HabitSync',
+    link: 'https://habitsync.site/'
   },
   {
     title: 'GeoName',
     description: 'An interactive web application built with Next.js with the main functionality of allowing the users to guess geographical locations and flags.',
     technologies: ['NextJS', 'Clerk', 'Tailwind CSS', 'Overpass API'],
     image: '/projects/geoname.png',
-    repo_link: 'https://github.com/AlexLamper/GeoName'
+    repo_link: 'https://github.com/AlexLamper/GeoName',
+    link: 'https://geoname.site/'
   },
   {
     title: 'FunNotes',
     description: 'FunNotes uses AI to transform plain notes into fun, engaging, and well-structured content with emoji suggestions and readability enhancements.',
     technologies: ['NextJS', 'Supabase', 'OpenAPI', 'Tailwind CSS'],
     image: '/projects/funnotes.png',
-    repo_link: 'https://github.com/AlexLamper/FunNotes'
+    repo_link: 'https://github.com/AlexLamper/FunNotes',
+    link: 'https://funnotes.vercel.app/'
   },
   {
     title: 'YoutubeDownloader',
     description: 'A simple tool to easily download YouTube videos, allowing users to save their favorite content for offline viewing. It offers a fast and straightforward way to download videos made with Python.',
     technologies: ['Python', 'youtube-dl'],
     image: '/projects/youtubedownloader.png',
-    repo_link: 'https://github.com/AlexLamper/YouTubeDownloader'
+    repo_link: 'https://github.com/AlexLamper/YouTubeDownloader',
   },
   {
     title: 'ToDoApp',
     description: 'A simple and intuitive To-Do mobile application built with Flutter, designed to help users efficiently manage their tasks with features like task creation, editing, deletion, and completion tracking.',
     technologies: ['Flutter', 'Dart', 'SQLite'],
     image: '/projects/todoapp.png',
-    repo_link: 'https://github.com/AlexLamper/ToDoApp'
+    repo_link: 'https://github.com/AlexLamper/ToDoApp',
   },
 ]
 
@@ -84,7 +90,11 @@ export function Projects() {
                         className="w-full h-48 object-cover"
                     />
                     <CardHeader>
-                        <CardTitle>{project.title}</CardTitle>
+                        <CardTitle>
+                          <Link href={project.link || "#"}  target="_blank" passHref>
+                            {project.title}
+                          </Link>
+                        </CardTitle>
                         <CardDescription>{project.description}</CardDescription>
                     </CardHeader>
                     <CardContent>

@@ -1,4 +1,4 @@
-# [**My Portfolio**](https://alexlamper.nl/) – Showcasing My Journey as a Developer
+# [**My Portfolio**](https://alexlamper.nl/)
 
 ### About My Portfolio
 

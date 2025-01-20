@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Alex Lamper - Portfolio',
-  description: 'Student at HZ University of Applied Science | Next.js Enthusiast',
+  description: 'Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast',
 }
 
 export default function RootLayout({
@@ -17,12 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <div className="max-w-screen overflow-x-hidden">{children}</div>
         </ThemeProvider>
       </body>
     </html>
   )
 }
-

@@ -21,7 +21,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mb-8 max-w-2xl mx-auto text-xl text-muted-foreground"
         >
-          Student at HZ University of Applied Science | Next.js Enthusiast | Creative Developer
+          Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

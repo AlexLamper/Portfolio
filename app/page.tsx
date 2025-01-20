@@ -18,7 +18,7 @@ export default function Home() {
   })
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 dark:bg-gradient-to-b dark:from-gray-100 dark:to-gray-300 text-white dark:text-black overflow-x-hidden">
       <motion.div className="fixed top-0 left-0 right-0 h-2 bg-blue-500 origin-[0%]" style={{ scaleX }} />
       <Prologue />
       <Journey />
@@ -30,4 +30,3 @@ export default function Home() {
     </div>
   )
 }
-

@@ -5,15 +5,15 @@ import { useRef } from "react"
 import { useTheme } from "next-themes"
 
 const milestones = [
-  { year: 2018, event: "Started learning to code" },
-  { year: 2019, event: "Built my first website" },
-  { year: 2020, event: "Learned React and got on GitHub" },
-  { year: 2021, event: "Started learning NextJS" },
-  { year: 2022, event: "Improving my programming skills" },
-  { year: 2023, event: "Started 'Lucerny'" },
-  { year: 2024, event: "Build websites for businesses" },
-  { year: 2025, event: "Launched my first startup" },
-]
+    { year: 2018, event: "Started learning to code from scratch" },
+    { year: 2019, event: "Built my very first complete website" },
+    { year: 2020, event: "Learned React and started using GitHub actively" },
+    { year: 2021, event: "Started exploring and learning NextJS framework" },
+    { year: 2022, event: "Focused on improving my programming skills further" },
+    { year: 2023, event: "Started my passion project named 'Lucerny'" },
+    { year: 2024, event: "Built custom websites for small and medium businesses" },
+    { year: 2025, event: "Successfully launched my very first startup" },
+]  
 
 export function Journey() {
   const ref = useRef(null)

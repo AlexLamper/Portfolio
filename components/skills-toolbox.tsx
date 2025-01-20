@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { useTheme } from "next-themes"
 
 const skills = [
   { name: "Next.js", icon: "⚛️", level: 90 },
@@ -17,6 +18,7 @@ const skills = [
 export function SkillsToolbox() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const { theme } = useTheme() // Get current theme
 
   return (
     <section ref={ref} className="min-h-screen flex flex-col items-center justify-center p-8">
@@ -24,9 +26,11 @@ export function SkillsToolbox() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-5xl font-bold mb-12 text-center"
+        className={`${
+          theme === "dark" ? "text-gray-900" : "text-white"
+        } text-3xl md:text-5xl font-bold mb-12 text-center`}
       >
-        My Developer Toolbox
+        My Toolbox
       </motion.h2>
       <motion.div
         initial="hidden"
@@ -47,11 +51,23 @@ export function SkillsToolbox() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
+            className={`${
+              theme === "dark" ? "bg-gray-800" : "bg-white"
+            } p-6 rounded-lg shadow-lg text-center`}
           >
             <div className="text-4xl mb-4">{skill.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-            <div className="w-full bg-gray-700 rounded-full h-2.5">
+            <h3
+              className={`${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              } text-xl font-semibold mb-2`}
+            >
+              {skill.name}
+            </h3>
+            <div
+              className={`${
+                theme === "dark" ? "bg-gray-700" : "bg-gray-300"
+              } w-full rounded-full h-2.5`}
+            >
               <motion.div
                 className="bg-blue-500 h-2.5 rounded-full"
                 initial={{ width: 0 }}
@@ -65,4 +81,3 @@ export function SkillsToolbox() {
     </section>
   )
 }
-

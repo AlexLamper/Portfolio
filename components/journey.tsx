@@ -33,7 +33,7 @@ export function Journey() {
         <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">My Journey</h2>
         <div className="relative">
           <div
-            className={`absolute left-1/2 transform -translate-x-1/2 h-full w-1 ${theme === "dark" ? "bg-blue-500" : "bg-blue-600"}`}
+            className={`absolute left-1/2 transform -translate-x-1/2 h-full w-1 ${theme === "dark" ? "bg-blue-500" : "bg-blue-600"} max-lg:hidden`}
           ></div>
           {milestones.map((milestone, index) => (
             <motion.div

@@ -6,10 +6,7 @@ import { Journey } from "@/components/journey"
 import { ProjectsChapter } from "@/components/projects-chapter"
 import { SkillsToolbox } from "@/components/skills-toolbox"
 import { Epilogue } from "@/components/epilogue"
-import { KonamiCodeEasterEgg } from "@/components/konami-code-easter-egg"
 import { HiddenPixelArt } from "@/components/hidden-pixel-art"
-import { TypewriterEffect } from "@/components/typewriter-effect"
-import { FloatingBubbles } from "@/components/floating-bubbles"
 import { useTheme } from "next-themes"
 
 export default function Home() {
@@ -38,10 +35,7 @@ export default function Home() {
       <ProjectsChapter />
       <SkillsToolbox />
       <Epilogue />
-      <KonamiCodeEasterEgg />
       <HiddenPixelArt />
-      <TypewriterEffect />
-      <FloatingBubbles />
     </div>
   )
 }

@@ -5,14 +5,24 @@ import { useRef } from "react"
 import { useTheme } from "next-themes"
 
 const skills = [
-  { name: "Next.js", icon: "⚛️", level: 90 },
-  { name: "React", icon: "🔵", level: 85 },
-  { name: "TypeScript", icon: "🔷", level: 80 },
-  { name: "Node.js", icon: "🟢", level: 75 },
-  { name: "TailwindCSS", icon: "🎨", level: 95 },
-  { name: "GraphQL", icon: "🔺", level: 70 },
-  { name: "Python", icon: "🐍", level: 65 },
-  { name: "Docker", icon: "🐳", level: 60 },
+  { name: "Java", icon: "☕", level: 85 },
+  { name: "JavaScript", icon: "🟨", level: 90 },
+  { name: "TypeScript", icon: "🔷", level: 88 },
+  { name: "Python", icon: "🐍", level: 85 },
+  { name: "Svelte", icon: "🟠", level: 75 },
+  { name: "React", icon: "⚛️", level: 90 },
+  { name: "Bootstrap", icon: "📘", level: 80 },
+  { name: "CSS3", icon: "🎨", level: 90 },
+  { name: "HTML5", icon: "📄", level: 95 },
+  { name: "TailwindCSS", icon: "🌬️", level: 95 },
+  { name: "ShadCN", icon: "✨", level: 70 },
+  { name: "Node.js", icon: "🟢", level: 85 },
+  { name: "MongoDB", icon: "🍃", level: 80 },
+  { name: "MySQL", icon: "🐬", level: 75 },
+  { name: "Docker", icon: "🐳", level: 70 },
+  { name: "Firebase", icon: "🔥", level: 75 },
+  { name: "Next.js", icon: "🌐", level: 90 },
+  { name: "Django", icon: "🌿", level: 80 },
 ]
 
 export function SkillsToolbox() {
@@ -42,7 +52,7 @@ export function SkillsToolbox() {
             },
           },
         }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-8"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-8"
       >
         {skills.map((skill) => (
           <motion.div

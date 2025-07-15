@@ -1,4 +1,4 @@
-import ProjectOverlay from '@/components/ProjectOverlay'
+import ProjectOverlay from '../../components/ProjectOverlay'
 
 type Props = {
   params: {

@@ -1,6 +1,10 @@
 import ProjectOverlay from '../../components/ProjectOverlay'
-import type { PageProps } from 'next'
+type ProjectPageProps = {
+  params: {
+    slug: string
+  }
+}
 
-export default function ProjectPage({ params }: PageProps<{ slug: string }>) {
+export default function ProjectPage({ params }: ProjectPageProps) {
   return <ProjectOverlay slug={params.slug} />
 }

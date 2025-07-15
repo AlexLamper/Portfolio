@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import ProjectMarker from './ProjectMarker'
 import SoundController from './SoundController'

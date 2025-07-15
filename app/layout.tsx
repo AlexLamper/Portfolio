@@ -1,28 +1,19 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-
-const inter = Inter({ subsets: ["latin"] })
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Alex Lamper - Portfolio",
-  description: "Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast",
+  description:
+    "Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className="bg-black text-white overflow-hidden">
+        {children}
       </body>
     </html>
-  )
+  );
 }
-

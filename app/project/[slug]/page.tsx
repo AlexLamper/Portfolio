@@ -1,11 +1,9 @@
 import ProjectOverlay from '../../components/ProjectOverlay'
 
-type Props = {
-  params: {
-    slug: string
-  }
-}
-
-export default function ProjectPage({ params }: Props) {
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   return <ProjectOverlay slug={params.slug} />
 }

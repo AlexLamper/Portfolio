@@ -1,17 +1,16 @@
-import type { Metadata } from "next"
-import "./globals.css"
-import { ReactNode } from "react";
+import './globals.css'
+import SoundController from '@/components/SoundController';
 
-export const metadata: Metadata = {
-  title: "Alex Lamper - Portfolio",
-  description:
-    "Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast",
-}
+export const metadata = {
+  title: 'alex@terminal.dev',
+  description: 'Interactieve fullscreen terminalportfolio',
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white overflow-hidden">
+      <body className="bg-black text-green-400 font-mono text-sm overflow-hidden h-screen w-screen">
+        <SoundController />
         {children}
       </body>
     </html>

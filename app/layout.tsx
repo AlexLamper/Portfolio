@@ -1,28 +1,18 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import './globals.css'
+import SoundController from '@/components/SoundController';
 
-const inter = Inter({ subsets: ["latin"] })
+export const metadata = {
+  title: 'alex@lamper.dev',
+  description: 'Alex Lamper - Portfolio Terminal',
+};
 
-export const metadata: Metadata = {
-  title: "Alex Lamper - Portfolio",
-  description: "Student at HZ University of Applied Science | Web Developer | Next.js Enthusiast",
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className="bg-black text-green-400 font-mono text-sm overflow-hidden h-screen w-screen">
+        <SoundController />
+        {children}
       </body>
     </html>
-  )
+  );
 }
-

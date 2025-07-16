@@ -1,4 +1,3 @@
-// app/components/ProjectDetail.tsx
 'use client';
 
 import { Project } from "@/data/types";

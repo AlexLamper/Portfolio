@@ -2,8 +2,8 @@ import './globals.css'
 import SoundController from '@/components/SoundController';
 
 export const metadata = {
-  title: 'alex@terminal.dev',
-  description: 'Interactieve fullscreen terminalportfolio',
+  title: 'alex@lamper.dev',
+  description: 'Alex Lamper - Portfolio Terminal',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

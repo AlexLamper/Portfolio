@@ -9,7 +9,7 @@ import { projects } from '@/data/projects';
 
 export default function Terminal() {
   const [lines, setLines] = useState<string[]>([
-    'alex@terminal.dev booting...',
+    'alex@lamper.dev booting...',
     '',
     'Type `help` to see available commands.',
   ]);
@@ -76,29 +76,46 @@ export default function Terminal() {
 
       case 'about':
         print(
-          'Alex Lamper — Full-Stack Developer from NL.',
-          'Passionate about frontend, animation, education, and building magical UI.'
+          'Alex Lamper — Student at HZ University of Applied Sciences & Developer.',
+          'I enjoy creating cool stuff using code.',
+          'Currently Learning: Java and Next.js to expand my full-stack development skills.'
         );
         setOutput(null);
         break;
 
       case 'whoami':
-        print('User: alex', 'Role: Developer', 'Location: Nederland');
+        print('User: alex', 'Role: Developer', 'Location: The Netherlands');
         setOutput(null);
         break;
 
       case 'skills':
-        print('Next.js, TypeScript, Tailwind, MongoDB, Framer Motion, SVG, i18n');
+        print('Java, JavaScript, TypeScript, Python, Svelte, React, Bootstrap, CSS3, HTML5, Tailwind CSS, Node.js, MongoDB, PostgreSQL, Docker, Firebase, Next.js, Bash, Django');
         setOutput(null);
         break;
 
-      case 'motd':
+      case 'motd': {
+        const motds = [
+            '`~$ git push your limits`',
+            '`~$ sudo rm -rf self-doubt/`',
+            '`~$ npm install confidence`',
+            '`~$ ./launch.sh --project=you`',
+            '`~$ ssh passion@future.dev`',
+            '`~$ tail -f ~/progress.log`',
+            '`~$ git merge --strategy=patience`',
+            '`~$ chmod +x growth`',
+        ];
+
+        const dayIndex = new Date().getDate() % motds.length;
+        const dailyMotd = motds[dayIndex];
+
         print(
-          '📡 Welcome to the personal terminal of Alex Lamper!',
-          'Explore. Build. Break. Rebuild.'
+            '> CONNECTING TO PORT 22...',
+            '> ACCESS GRANTED',
+            `> MOTD: ${dailyMotd}`
         );
         setOutput(null);
         break;
+    }
 
       case 'clear':
         setLines([]);
@@ -110,7 +127,7 @@ export default function Terminal() {
         setLines([
           'System rebooting...',
           '',
-          'alex@terminal.dev booting...',
+          'alex@lamper.dev booting...',
           '',
           'Type `help` to see available commands.',
         ]);

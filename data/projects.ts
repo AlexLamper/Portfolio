@@ -16,6 +16,13 @@ export const projects: Project[] = [
     tech: ['Next.js', 'TypeScript', 'MongoDB', 'Vercel', 'Tailwind CSS', 'Bible API', 'ShadCN', 'React', 'Framer Motion', 'NextAuth', 'Stripe'],
   },
   {
+    slug: 'bijbel-api',
+    title: 'Bijbel API',
+    description: 'Een Nederlandstalige Bijbel API die de Bijbel toegankelijk maakt voor ontwikkelaars en applicaties.',
+    link: 'https://bijbel-api.nl',
+    tech: ['Python', 'FastAPI', 'Render', 'Hostinger'],
+  },
+  {
     slug: 'geoname',
     title: 'GeoName',
     description: 'GeoName is an interactive web application built with Next.js with the main functionality of allowing the users to guess geographical locations and flags.',

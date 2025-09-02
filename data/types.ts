@@ -5,3 +5,5 @@ export type Project = {
   link: string;
   tech: string[];
 };
+
+export type Theme = 'matrix' | 'retro' | 'linux' | 'cyberpunk';

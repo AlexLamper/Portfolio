@@ -17,11 +17,13 @@ export default function CommandInput({ onSubmit }: { onSubmit: (val: string) => 
         setInput('');
       }}
     >
-      <span className="text-green-400">&gt;</span>{' '}
+      <span style={{ color: 'var(--terminal-accent)' }}>&gt;</span>{' '}
       <input
+        type="text"
         value={input}
         onChange={(e) => { setInput(e.target.value); playType(); }}
-        className="bg-transparent border-none outline-none text-green-300 w-[90%]"
+        className="bg-transparent border-none outline-none w-[90%]"
+        style={{ color: 'var(--terminal-text)' }}
         autoFocus
       />
     </form>

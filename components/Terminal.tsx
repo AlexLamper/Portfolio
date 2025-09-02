@@ -1,19 +1,35 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import CommandInput from './CommandInput';
 import TerminalLine from './TerminalLine';
 import ProjectList from './ProjectList';
 import ProjectDetail from './ProjectDetail';
 import { projects } from '@/data/projects';
+import { useTheme } from '@/lib/useTheme';
 
 export default function Terminal() {
-  const [lines, setLines] = useState<string[]>([
+  const headerLines = [
     'alex@lamper.dev booting...',
     '',
     'Type `help` to see available commands.',
-  ]);
+  ];
+  
+  const [lines, setLines] = useState<string[]>([]);
   const [output, setOutput] = useState<React.ReactElement | null>(null);
+  const terminalRef = useRef<HTMLDivElement>(null);
+  const { theme, setTheme } = useTheme();
+
+  // Full-page click handler for input focus
+  useEffect(() => {
+    const handleClick = () => {
+      const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+      if (input) input.focus();
+    };
+
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
 
   const print = (...newLines: string[]) => {
     setLines((prev) => [...prev, ...newLines]);
@@ -34,12 +50,40 @@ export default function Terminal() {
           'Available commands:',
           '  projects / ls       - show project list',
           '  open [slug]         - open project details',
+          '  theme [name]        - change theme (matrix/retro/linux/cyberpunk)',
+          '  themes              - list available themes',
           '  about               - about me',
           '  skills              - tech stack',
           '  whoami              - identity',
           '  motd                - message of the day',
           '  clear               - clear terminal',
           '  exit / reboot       - restart terminal'
+        );
+        setOutput(null);
+        break;
+
+      case 'theme':
+        if (!arg) {
+          print(`Current theme: ${theme}`, "Usage: theme [matrix/retro/linux/cyberpunk]");
+        } else {
+          const validThemes = ['matrix', 'retro', 'linux', 'cyberpunk'];
+          if (validThemes.includes(arg)) {
+            setTheme(arg as 'matrix' | 'retro' | 'linux' | 'cyberpunk');
+            print(`Theme changed to '${arg}'`);
+          } else {
+            print(`Unknown theme '${arg}'. Available: ${validThemes.join(', ')}`);
+          }
+        }
+        setOutput(null);
+        break;
+
+      case 'themes':
+        print(
+          'Available themes:',
+          '  matrix     - Classic green terminal',
+          '  retro      - Amber CRT monitor style', 
+          '  linux      - Ubuntu-style terminal',
+          '  cyberpunk  - Neon purple cyberpunk'
         );
         setOutput(null);
         break;
@@ -115,7 +159,7 @@ export default function Terminal() {
         );
         setOutput(null);
         break;
-    }
+      }
 
       case 'clear':
         setLines([]);
@@ -124,13 +168,7 @@ export default function Terminal() {
 
       case 'exit':
       case 'reboot':
-        setLines([
-          'System rebooting...',
-          '',
-          'alex@lamper.dev booting...',
-          '',
-          'Type `help` to see available commands.',
-        ]);
+        setLines([]);
         setOutput(null);
         break;
 
@@ -142,7 +180,20 @@ export default function Terminal() {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto h-full pb-10">
+    <div 
+      ref={terminalRef}
+      className="flex-1 overflow-y-auto h-full pb-10 cursor-text"
+      style={{ 
+        backgroundColor: 'var(--terminal-bg)',
+        color: 'var(--terminal-text)'
+      }}
+    >
+      {/* Persistent header */}
+      {headerLines.map((line, idx) => (
+        <TerminalLine key={`header-${idx}`} text={line} />
+      ))}
+      
+      {/* User commands and output */}
       {lines.map((line, idx) => (
         <TerminalLine key={idx} text={line} />
       ))}

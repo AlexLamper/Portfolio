@@ -3,7 +3,37 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', monospace;
+}
+
+/* Theme Variables */
+:root {
+  /* Matrix Theme (default) */
+  --terminal-bg: #000000;
+  --terminal-text: #00ff00;
+  --terminal-accent: #00aa00;
+  --terminal-border: #003300;
+}
+
+[data-theme="retro"] {
+  --terminal-bg: #2d1810;
+  --terminal-text: #ffb000;
+  --terminal-accent: #ff8800;
+  --terminal-border: #664422;
+}
+
+[data-theme="linux"] {
+  --terminal-bg: #300a24;
+  --terminal-text: #ffffff;
+  --terminal-accent: #729fcf;
+  --terminal-border: #555753;
+}
+
+[data-theme="cyberpunk"] {
+  --terminal-bg: #0a0a0a;
+  --terminal-text: #ff00ff;
+  --terminal-accent: #00ffff;
+  --terminal-border: #ff0080;
 }
 
 @layer base {

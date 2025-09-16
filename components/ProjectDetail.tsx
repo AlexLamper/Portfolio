@@ -10,7 +10,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
       </p>
       <p className="mb-2">{project.description}</p>
       <p className="mb-2">
-        <strong style={{ color: 'var(--terminal-accent)' }}>Technologieën:</strong> {project.tech.join(', ')}
+        <strong style={{ color: 'var(--terminal-accent)' }}>Technologies:</strong> {project.tech.join(', ')}
       </p>
       <a
         href={project.link}
@@ -19,7 +19,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         className="underline hover:opacity-80"
         style={{ color: 'var(--terminal-accent)' }}
       >
-        Bekijk project ↗
+        View project ↗
       </a>
     </div>
   );

@@ -120,9 +120,9 @@ export default function Terminal() {
 
       case 'about':
         print(
-          'Alex Lamper — Student at HZ University of Applied Sciences & Developer.',
-          'I enjoy creating cool stuff using code.',
-          'Currently Learning: Java and Next.js to expand my full-stack development skills.'
+          'Alex Lamper — Student at HZ University of Applied Sciences & Full-Stack Developer.',
+          'I enjoy building things with code and exploring new tech.',
+          'Currently learning Java & Next.js to level up my skills.'
         );
         setOutput(null);
         break;
@@ -133,7 +133,7 @@ export default function Terminal() {
         break;
 
       case 'skills':
-        print('Java, JavaScript, TypeScript, Python, Svelte, React, Bootstrap, CSS3, HTML5, Tailwind CSS, Node.js, MongoDB, PostgreSQL, Docker, Firebase, Next.js, Bash, Django');
+        print('Java, JavaScript, TypeScript, Python, Svelte, React, Bootstrap, CSS3, HTML5, Tailwind CSS, Node.js, MongoDB, PostgreSQL, Docker, Firebase, Next.js, Bash, Django, MySQL, and more...');
         setOutput(null);
         break;
 
@@ -147,6 +147,12 @@ export default function Terminal() {
             '`~$ tail -f ~/progress.log`',
             '`~$ git merge --strategy=patience`',
             '`~$ chmod +x growth`',
+            '`~$ alias success="hard_work && persistence"`',
+            '`~$ echo $PATH | grep -q happiness`',
+            '`~$ docker run -it dreams:latest`',
+            '`~$ mv mistakes/ lessons/`',
+            '`~$ python3 evolve.py --self --daily`',
+            '`~$ ./deploy.sh --env=real-life`',
         ];
 
         const dayIndex = new Date().getDate() % motds.length;
@@ -162,6 +168,7 @@ export default function Terminal() {
       }
 
       case 'clear':
+      case 'cls':
         setLines([]);
         setOutput(null);
         break;

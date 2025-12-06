@@ -4,15 +4,15 @@ export const projects: Project[] = [
   {
     slug: 'scriptura',
     title: 'Scriptura',
-    description: 'Scriptura – Your Interactive Bible Learning Platform, designed to deepen your understanding of the Scriptures through courses, insightful lessons, and a personalized experience.',
+    description: 'Scriptura - Your Interactive Bible Learning Platform, designed to deepen your understanding of the Scriptures through courses, insightful lessons, and a personalized experience.',
     link: 'https://scriptura-edu.com',
     tech: ['Next.js', 'TypeScript', 'MongoDB', 'Vercel', 'Tailwind CSS', 'Scriptura API', 'ShadCN', 'React', 'Framer Motion', 'NextAuth', 'Stripe'],
   },
   {
     slug: 'scriptura-api',
     title: 'Scriptura API',
-    description: "A REST API for retrieving Bible texts. This API was designed for the application 'Scriptura'. But it can be used by developers, theologians, students, and hobbyists who want to use Biblical texts digitally.",
-    link: 'https://bijbel-api.nl',
+    description: "A REST API for retrieving Bible texts and commentary. This API was designed for the application 'Scriptura'. But it can be used by developers, theologians, students, and hobbyists who want to use Biblical texts digitally.",
+    link: 'https://scriptura-api.com',
     tech: ['Python', 'FastAPI', 'Render'],
   },
   {

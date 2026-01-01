@@ -5,7 +5,7 @@ export const projects: Project[] = [
     slug: 'scriptura',
     title: 'Scriptura',
     description: 'Scriptura is a Bible study platform for everyone, designed to read, explain and understand the Bible.',
-    link: 'https://scriptura-edu.com',
+    link: 'https://scriptura.cloud',
     tech: ['Next.js', 'TypeScript', 'MongoDB', 'Vercel', 'Tailwind CSS', 'Scriptura API', 'ShadCN', 'React', 'Framer Motion', 'NextAuth', 'Stripe'],
   },
   {

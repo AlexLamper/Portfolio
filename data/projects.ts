@@ -4,16 +4,9 @@ export const projects: Project[] = [
   {
     slug: 'scriptura',
     title: 'Scriptura',
-    description: 'Scriptura - Your Interactive Bible Learning Platform, designed to deepen your understanding of the Scriptures through courses, insightful lessons, and a personalized experience.',
+    description: 'Scriptura is a Bible study platform for everyone, designed to read, explain and understand the Bible.',
     link: 'https://scriptura-edu.com',
     tech: ['Next.js', 'TypeScript', 'MongoDB', 'Vercel', 'Tailwind CSS', 'Scriptura API', 'ShadCN', 'React', 'Framer Motion', 'NextAuth', 'Stripe'],
-  },
-  {
-    slug: 'scriptura-api',
-    title: 'Scriptura API',
-    description: "A REST API for retrieving Bible texts and commentary. This API was designed for the application 'Scriptura'. But it can be used by developers, theologians, students, and hobbyists who want to use Biblical texts digitally.",
-    link: 'https://scriptura-api.com',
-    tech: ['Python', 'FastAPI', 'Render'],
   },
   {
     slug: 'gratis-theorie',
@@ -23,18 +16,25 @@ export const projects: Project[] = [
     tech: ['TypeScript', 'Next.js', 'MongoDB', 'Tailwind CSS', 'Vercel', 'ShadCN', 'Framer Motion'],
   },
   {
+    slug: 'meneerwit',
+    title: 'Meneer Wit',
+    description: '(Dutch site) De Nederlandse versie van het spel "Mister White" - maar dan gratis en met een onbeperkt aantal woorden.',
+    link: 'https://meneerwit.com',
+    tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'ShadCN', 'Framer Motion'],
+  },
+  {
+    slug: 'scriptura-api',
+    title: 'Scriptura API',
+    description: "A REST API for retrieving Bible texts and commentary. This API was designed for the application 'Scriptura'. But it can be used by developers, theologians, students, and hobbyists who want to use Biblical texts digitally.",
+    link: 'https://scriptura-api.com',
+    tech: ['Python', 'FastAPI', 'Render'],
+  },
+  {
     slug: 'geoname',
-    title: 'GeoName',
+    title: 'GeoName (Deprecated)',
     description: 'GeoName is an interactive web application built with Next.js with the main functionality of allowing the users to guess geographical locations and flags.',
     link: 'https://geoname.site',
     tech: ['Next.js', 'Typescript', 'Vercel', 'ShadCN', 'Tailwind CSS', 'Leaflet', 'Overpass API', 'Clerk', 'React-Icons'],
-  },
-  {
-    slug: 'habitsync',
-    title: 'HabitSync',
-    description: 'HabitSync - A simple and intuitive app to help you add, track, and maintain your habits effortlessly. Stay consistent and motivated as you build positive habits with ease.',
-    link: 'https://habitsync.site',
-    tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'ShadCN'],
   },
   {
     slug: 'christelijkepodcasts',

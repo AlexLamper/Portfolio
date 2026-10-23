@@ -1,5 +1,6 @@
 import './globals.css'
 import SoundController from '@/components/SoundController';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'alex@lamper.dev',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <SoundController />
         {children}
+        <Analytics />
       </body>
     </html>
   );
